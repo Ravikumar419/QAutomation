@@ -21,6 +21,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'
+          distribution: 'adoptopenjdk'  # You can also use 'zulu' or 'oracle' if needed
 
       # Step 3: Install Katalon Studio (latest stable version)
       - name: Install Katalon Studio
