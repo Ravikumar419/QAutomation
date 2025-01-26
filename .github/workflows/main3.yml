@@ -49,7 +49,7 @@ jobs:
             -appium:automationName="XCUITest" \
             -appium:udid="00008020-00180924262A402E" \
             -licenseRelease=true \
-            -orgID="976796"
+            -orgID="1466510"
 
       # Optional: Clean up
       - name: Clean up
