@@ -3,12 +3,12 @@ name: Run Katalon iOS Tests with Appium
 on:
   push:
     branches:
-      - main  # Trigger on changes to the main branch
+      - main
   pull_request:
     branches:
-      - main  # Trigger on pull requests to the main branch
+      - main
   schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight UTC
+    - cron: '0 0 * * *'
 
 jobs:
   run-ios-tests:
@@ -19,25 +19,29 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: List contents of the project directory to verify file structure
-      - name: List contents of the project directory
+      # Step 2: List contents of the root directory to verify structure
+      - name: List contents of the root directory
+        run: ls -la ${{ github.workspace }}
+
+      # Step 3: List contents of QAutomation to verify its contents
+      - name: List contents of QAutomation directory
         run: ls -la ${{ github.workspace }}/QAutomation
 
-      # Step 3: Set up Java for Katalon Studio (using Zulu distribution)
+      # Step 4: Set up Java for Katalon Studio
       - name: Set up Java (Zulu)
         uses: actions/setup-java@v2
         with:
-          java-version: '11'  # Specify the Java version needed for Katalon Studio
-          distribution: 'zulu'  # Use Zulu OpenJDK distribution
+          java-version: '11'
+          distribution: 'zulu'
 
-      # Step 4: Run Katalon Studio tests directly using Katalon GitHub Action
+      # Step 5: Run Katalon Studio tests
       - name: Run Katalon Studio tests with Katalon GitHub Action
         uses: katalon-studio/katalon-studio-github-action@v2
         with:
-          version: '10.0.1'  # Specify the version of Katalon Studio (adjust this if needed)
-          projectPath: '${{ github.workspace }}/QAutomation/iOS Mobile Tests with Katalon Studio.prj'  # Corrected project path
+          version: '10.0.1'
+          projectPath: '${{ github.workspace }}/QAutomation/iOS Mobile Tests with Katalon Studio.prj'  # Corrected path
           args: '-noSplash -retry=0 \
-                 -testSuitePath="Test Suites/IOS_Automation_TestSuite" \  # Corrected test suite path
+                 -testSuitePath="Test Suites/IOS_Automation_TestSuite" \
                  -apiKey=${{ secrets.API_KEY }} \
                  --config -mobileDevice=true \
                  -appium:platformName="iOS" \
