@@ -1,0 +1,50 @@
+name: Run Katalon iOS Tests1
+
+on:
+  push:
+    branches:
+      - main  # Trigger when there are changes to the main branch
+  pull_request:
+    branches:
+      - main  # Trigger on pull requests to the main branch
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight UTC
+
+jobs:
+  run-ios-tests:
+    runs-on: macos-latest  # Use macOS runner for iOS testing
+
+    steps:
+      # Step 1: Checkout repository
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up JDK for Katalon Studio
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'  # Set the appropriate Java version needed by Katalon Studio
+
+      # Step 3: Install Katalon Studio (latest stable release)
+      - name: Install Katalon Studio
+        run: |
+          wget https://download.katalon.com/7.9.1/Katalon_Studio_Engine_Mac_7.9.1.zip -O katalon.zip  # Replace with the latest version
+          unzip katalon.zip -d katalon
+          chmod +x katalon/Katalon_Studio.app/Contents/MacOS/Katalon
+
+      # Step 4: Run Katalon Tests
+      - name: Run iOS Katalon Tests
+        run: |
+          katalon/Katalon_Studio.app/Contents/MacOS/Katalon -noSplash -runMode=console \
+          -projectPath=$(pwd)/QAutomation/KatalonStudio.prj \
+          -testSuitePath="Test Suites/New Test Suite" \
+          -browserType="Mobile" \
+          -deviceName="AT ipad" \
+          -platformVersion="18.0.1"  # Customize the device name and version as per your test environment
+
+      # Step 5: Upload Test Results
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: katalon-ios-test-results
+          path: $(pwd)/QAutomation/Reports  # Ensure Katalon test reports are saved in this directory
