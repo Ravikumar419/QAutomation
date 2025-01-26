@@ -47,7 +47,8 @@ jobs:
       - name: List QAutomation Directory
         run: |
           echo "Listing contents of QAutomation directory..."
-          ls -al $(pwd)/QAutomation
+          ls -al $(pwd)/  # This will list the contents of the current directory where the repo is checked out
+          ls -al $(pwd)/QAutomation  # List the contents of the QAutomation directory to verify the structure
 
       # Step 5: List Files in Reports Directory (Verify if reports are being created)
       - name: List Reports Directory
