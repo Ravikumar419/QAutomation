@@ -1,69 +1,36 @@
 name: Katalon Studio Tests
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  schedule:
-    - cron: '0 0 * * *'  # Daily at midnight UTC (Optional)
+# ... (on section)
 
 jobs:
   run-tests:
-    runs-on: windows-latest  # Or macOS-latest if needed
+    runs-on: windows-latest
+    env:
+      KATALON_VERSION: '8.6.0' # Set your desired Katalon version here
+      KATALON_INSTALL_PATH: C:\katalon # Installation path
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      # ... (checkout and Java setup)
 
-      - name: Set up Java (Zulu)
-        uses: actions/setup-java@v3  # Recommended for Katalon Studio
+      - name: Cache Katalon Studio
+        id: cache-katalon
+        uses: actions/cache@v3
         with:
-          java-version: '11'
-          distribution: 'zulu'
-
-      - name: Install Katalon Studio (if not pre-installed)
-        uses: shinnn/katalon-studio-installer@v1  # Optional, adjust version if needed
-        with:
-          version: '8.5.5'  # Or your desired version
-
-      - name: Use a specific Katalon Studio version (Optional)
-        uses: actions/cache@v3  # Cache Katalon Studio download
-        with:
-          path: ${{ runner.tempDirectory }}/katalon_studio
-          key: ${{ runner.os }}-katalon-${{ env.KATALON_VERSION }}
+          path: ${{ env.KATALON_INSTALL_PATH }}
+          key: ${{ runner.os }}-katalon-${{ env.KATALON_VERSION }}-${{ hashFiles('**/katalon-studio*.zip') }}
           restore-keys: |
-            ${{ runner.os }}-katalon-
+            ${{ runner.os }}-katalon-${{ env.KATALON_VERSION }}-
 
-      - name: Download Katalon Studio (if not cached)
+      - name: Install Katalon Studio (if not cached)
+        if: steps.cache-katalon.outputs.cache-hit != 'true'
         run: |
-          if [ ! -f "${{ runner.tempDirectory }}/katalon_studio/katalon.zip" ]; then
-            curl -sfL https://download.katalon.com/katalon-studio/katalon-studio-${{ env.KATALON_VERSION }}-windows-64.zip -o "${{ runner.tempDirectory }}/katalon_studio/katalon.zip"
-          fi
-
-      - name: Extract Katalon Studio
-        run: |
-          unzip -qq "${{ runner.tempDirectory }}/katalon_studio/katalon.zip" -d "${{ runner.tempDirectory }}/katalon_studio"
-
-      - name: Set Katalon Studio path
-        env:
-          KATALON_STUDIO_PATH: ${{ runner.tempDirectory }}/katalon_studio/katalon.exe
+          Invoke-WebRequest -Uri "https://download.katalon.com/katalon-studio/katalon-studio-${{ env.KATALON_VERSION }}-windows-64.zip" -OutFile katalon.zip
+          Expand-Archive -Path katalon.zip -DestinationPath ${{ env.KATALON_INSTALL_PATH }}
+          Remove-Item katalon.zip
 
       - name: Run Katalon Studio tests
+        shell: pwsh
         run: |
-          "${{ env.KATALON_STUDIO_PATH }}" -noSplash -retry=0 \
-             -testSuiteCollectionPath="Test Suites/Simple Test Suite Collection" \
-             -apiKey=${{ secrets.API_KEY }} --config -webui.autoUpdateDrivers=true
+          & "${{ env.KATALON_INSTALL_PATH }}\katalon.exe" -noSplash -runMode=console -projectPath="${{ github.workspace }}" -testSuiteCollectionPath="Test Suites/Simple Test Suite Collection" -apiKey=${{ secrets.API_KEY }} -retry=0 --config -webui.autoUpdateDrivers=true
 
-      - name: Upload Test Reports (Optional)
-        uses: actions/upload-artifact@v3
-        if: always()
-        with:
-          name: katalon-reports
-          path: path/to/your/katalon/reports  # Replace with actual report path
-          retention-days: 7
-
-      - name: Clean up (Optional)
-        run: echo "Cleaning up..."
+      # ... (report upload and cleanup)
