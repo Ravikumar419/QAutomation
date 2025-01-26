@@ -16,11 +16,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      # Step 2: Install Katalon Studio (version 10.0.1)
+      # Step 2: Unzip Katalon Studio 10.0.1 (uploaded to the repository)
       - name: Install Katalon Studio 10.0.1
         run: |
-          wget https://download.katalon.com/10.0.1/Katalon_Studio_Engine_Mac_10.0.1.zip -O katalon.zip  # Download Katalon 10.0.1 version
-          unzip katalon.zip -d katalon  # Unzip the downloaded package
+          unzip katalon/Katalon_Studio_Engine_Mac_10.0.1.zip -d katalon  # Unzip the uploaded Katalon zip
           chmod +x katalon/Katalon_Studio.app/Contents/MacOS/Katalon  # Make Katalon executable
 
       # Step 3: Run Katalon iOS Tests
