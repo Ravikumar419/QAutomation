@@ -1,4 +1,4 @@
-name: Katalon Studio Tests
+name: Run Katalon iOS Tests with Appium
 
 on:
   push:
@@ -8,14 +8,11 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *'  # Daily at midnight UTC (Optional)
 
 jobs:
-  run-tests:
-    runs-on: windows-latest
-    env:
-      KATALON_VERSION: '8.6.0' # Or your desired Katalon version
-      KATALON_INSTALL_PATH: C:\katalon
+  run-ios-tests:
+    runs-on: macos-latest
 
     steps:
       - name: Checkout code
@@ -27,31 +24,37 @@ jobs:
           java-version: '11'
           distribution: 'zulu'
 
-      - name: Cache Katalon Studio
-        id: cache-katalon
-        uses: actions/cache@v3
+      - name: Set up Ruby and Bundler
+        uses: ruby/setup-ruby@v1
         with:
-          path: ${{ env.KATALON_INSTALL_PATH }}
-          key: ${{ runner.os }}-katalon-${{ env.KATALON_VERSION }}-${{ hashFiles('**/katalon-studio*.zip') }}
-          restore-keys: |
-            ${{ runner.os }}-katalon-${{ env.KATALON_VERSION }}-
+          ruby-version: '3.1' # Or your desired Ruby version
+          bundler-cache: true
 
-      - name: Install Katalon Studio (if not cached)
-        if: steps.cache-katalon.outputs.cache-hit != 'true'
+      - name: Install Appium dependencies
         run: |
-          Invoke-WebRequest -Uri "https://download.katalon.com/katalon-studio/katalon-studio-${{ env.KATALON_VERSION }}-windows-64.zip" -OutFile katalon.zip
-          Expand-Archive -Path katalon.zip -DestinationPath ${{ env.KATALON_INSTALL_PATH }}
-          Remove-Item katalon.zip
+          gem install bundler
+          bundle install --jobs 4 --retry 3 # More robust bundle install
+
+      - name: Download Katalon Studio
+        uses: shinnn/katalon-studio-installer@v1  # Optional, adjust version if needed
+        with:
+          version: '8.6.0'  # Or your desired version
+
+      - name: Set Katalon Studio path
+        run: echo "::set-output name=katalon_path::/path/to/katalon/katalon"  # Replace with actual path
 
       - name: Run Katalon Studio tests
-        shell: pwsh
         run: |
-          try {
-            & "${{ env.KATALON_INSTALL_PATH }}\katalon.exe" -noSplash -runMode=console -projectPath="${{ github.workspace }}" -testSuiteCollectionPath="Test Suites/Simple Test Suite Collection" -apiKey=${{ secrets.API_KEY }} -retry=0 --config -webui.autoUpdateDrivers=true
-          } catch {
-            Write-Error "Katalon execution failed: $_"
-            exit 1 # Important: Exit with a non-zero code to fail the workflow
-          }
+          "${{ steps.set_katalon_path.outputs.katalon_path }}" -noSplash -retry=0 \
+                 -testSuitePath="Test Suites/IOS_Automation_TestSuite" \
+                 -apiKey=${{ secrets.API_KEY }} \
+                 --config -mobileDevice=true \
+                 -appium:platformName="iOS" \
+                 -appium:platformVersion="16.0" \ # Use a supported version
+                 -appium:deviceName="iPhone 14" \ # Or simulator name
+                 -appium:bundleId="your.bundle.id" \ # **REPLACE THIS!**
+                 -appium:automationName="XCUITest" \
+                 -appium:udid="auto"
 
       - name: Upload Test Reports (Optional)
         uses: actions/upload-artifact@v3
@@ -62,5 +65,4 @@ jobs:
           retention-days: 7
 
       - name: Clean up (Optional)
-        if: always()
-        run: Remove-Item -Path ${{ env.KATALON_INSTALL_PATH }} -Recurse -Force
+        run: echo "Cleaning up..."
