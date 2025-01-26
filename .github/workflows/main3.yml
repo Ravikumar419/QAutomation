@@ -1,48 +1,22 @@
-name: Run Katalon iOS Tests with Appium
+name: Run Katalon Studio Tests
 
 on:
   push:
     branches:
-      - main  # Trigger on changes to the main branch
-  pull_request:
-    branches:
-      - main  # Trigger on pull requests to the main branch
-  schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight UTC
+      - main
 
 jobs:
-  run-ios-tests:
-    runs-on: macos-latest  # macOS runner for iOS testing
+  run-katalon-tests:
+    runs-on: macos-latest
 
     steps:
-      # Step 1: Checkout code
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      # Step 2: Set up Java for Katalon Studio (using Zulu distribution)
-      - name: Set up Java (Zulu)
-        uses: actions/setup-java@v2
-        with:
-          java-version: '11'  # Specify the Java version needed for Katalon Studio
-          distribution: 'zulu'  # Use Zulu OpenJDK distribution
+    - name: List files in the directory (for debugging)
+      run: |
+        ls -la ./  # List the files in the root directory of the repo
 
-      # Step 3: Run Katalon Studio tests directly using Katalon GitHub Action
-      - name: Run Katalon Studio tests with Katalon GitHub Action
-        uses: katalon-studio/katalon-studio-github-action@v2
-        with:
-          version: '10.0.1'  # Specify the version of Katalon Studio (adjust this if needed)
-          projectPath: '${{ github.workspace }}/QAutomation/iOS Mobile Tests with Katalon Studio.prj'  # Path to your Katalon project (adjust accordingly)
-          args: '-noSplash -retry=0 \
-                 -testSuitePath="Test Suites/YourTestSuite" \  # Replace with your actual test suite path
-                 -apiKey=${{ secrets.API_KEY }} \
-                 --config -mobileDevice=true \
-                 -appium:platformName="iOS" \
-                 -appium:platformVersion="18.0.1" \
-                 -appium:deviceName="iPad" \
-                 -appium:bundleId="my.com.etiqa.ease.dev" \
-                 -appium:automationName="XCUITest" \
-                 -appium:udid="00008020-00180924262A402E"'
-
-      # Optional: Clean up
-      - name: Clean up
-        run: echo "Cleaning up..."
+    - name: Run Katalon Studio tests
+      run: |
+        katalon-execute -projectPath "./iOS Mobile Tests with Katalon Studio.prj"
