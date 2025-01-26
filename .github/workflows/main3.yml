@@ -1,24 +1,50 @@
-name: Run Katalon Tests
+name: Run Katalon iOS Tests
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master  # Run tests when changes are pushed to the master branch
   pull_request:
-    branches: [ master ]
+    branches:
+      - master  # Run tests when a pull request is created against master
+  schedule:
+    - cron: '0 0 * * *'  # Optional: Run every day at midnight (UTC)
 
 jobs:
-  build:
-    runs-on: macos-latest  # For iOS tests, use macOS runner
+  run-ios-tests:
+    runs-on: macos-latest  # Use macOS runner for iOS tests
 
     steps:
-      # Step 1: Checkout code
+      # Step 1: Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Run Katalon Studio tests using the Katalon GitHub Action
-      - name: Run Katalon Studio tests
-        uses: katalon-studio/katalon-studio-github-action@v2
+      # Step 2: Set up Java (required for Katalon Studio)
+      - name: Set up Java
+        uses: actions/setup-java@v2
         with:
-          version: '10.0.1'  # Specify the version of Katalon Studio
-          projectPath: '${{ github.workspace }}/QAutomation'  # Path to your Katalon project
-          args: '-noSplash -retry=0 -testSuiteCollectionPath="Test Suites/Simple Test Suite Collection" -apiKey=${{ secrets.API_KEY }} --config -webui.autoUpdateDrivers=true'
+          java-version: '11'  # Katalon requires Java 11 (you can update if using a different version)
+
+      # Step 3: Download and install Katalon Studio (use latest version or specific version)
+      - name: Install Katalon Studio
+        run: |
+          wget https://download.katalon.com/10.0.1/Katalon_Studio_Engine_Mac_10.0.1.zip -O katalon.zip  # Update URL for latest version
+          unzip katalon.zip -d katalon
+          chmod +x katalon/Katalon_Studio.app/Contents/MacOS/Katalon
+
+      # Step 4: Run the Katalon Studio tests
+      - name: Run Katalon iOS Tests
+        run: |
+          katalon/Katalon_Studio.app/Contents/MacOS/Katalon -noSplash -runMode=console \
+          -projectPath=$(pwd)/QAutomation/KatalonStudio.prj \
+          -testSuitePath="Test Suites/YourTestSuite" \
+          -browserType="Mobile" \
+          -deviceName="iPad" \
+          -platformVersion="16.0"  # Adjust version if needed
+
+      # Optional Step: Upload test results (if you want to upload Katalon test reports)
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: katalon-ios-test-results
+          path: $(pwd)/QAutomation/Reports  # Ensure this path matches where Katalon outputs test reports
