@@ -1,16 +1,31 @@
 name: Katalon Studio Tests
 
-# ... (on section)
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   run-tests:
     runs-on: windows-latest
     env:
-      KATALON_VERSION: '8.6.0' # Set your desired Katalon version here
-      KATALON_INSTALL_PATH: C:\katalon # Installation path
+      KATALON_VERSION: '8.6.0' # Or your desired Katalon version
+      KATALON_INSTALL_PATH: C:\katalon
 
     steps:
-      # ... (checkout and Java setup)
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Java (Zulu)
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'zulu'
 
       - name: Cache Katalon Studio
         id: cache-katalon
@@ -31,6 +46,21 @@ jobs:
       - name: Run Katalon Studio tests
         shell: pwsh
         run: |
-          & "${{ env.KATALON_INSTALL_PATH }}\katalon.exe" -noSplash -runMode=console -projectPath="${{ github.workspace }}" -testSuiteCollectionPath="Test Suites/Simple Test Suite Collection" -apiKey=${{ secrets.API_KEY }} -retry=0 --config -webui.autoUpdateDrivers=true
+          try {
+            & "${{ env.KATALON_INSTALL_PATH }}\katalon.exe" -noSplash -runMode=console -projectPath="${{ github.workspace }}" -testSuiteCollectionPath="Test Suites/Simple Test Suite Collection" -apiKey=${{ secrets.API_KEY }} -retry=0 --config -webui.autoUpdateDrivers=true
+          } catch {
+            Write-Error "Katalon execution failed: $_"
+            exit 1 # Important: Exit with a non-zero code to fail the workflow
+          }
 
-      # ... (report upload and cleanup)
+      - name: Upload Test Reports (Optional)
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: katalon-reports
+          path: ${{ github.workspace }}/Reports # Adjust if necessary
+          retention-days: 7
+
+      - name: Clean up (Optional)
+        if: always()
+        run: Remove-Item -Path ${{ env.KATALON_INSTALL_PATH }} -Recurse -Force
