@@ -31,7 +31,7 @@ jobs:
         uses: katalon-studio/katalon-studio-github-action@v2
         with:
           version: '10.0.1'  # Specify the version of Katalon Studio (adjust this if needed)
-          projectPath: '${{ github.workspace }}/QAutomation/iOS Mobile Tests with Katalon Studio.prj'  # Path to your Katalon project (adjust accordingly)
+          projectPath: '${{ github.workspace }}'  # Path to your Katalon project (adjust accordingly)
           args: '-noSplash -retry=0 \
                  -testSuitePath="Test Suites/IOS_Automation_TestSuite" \  # Updated test suite path
                  -apiKey=${{ secrets.API_KEY }} \
