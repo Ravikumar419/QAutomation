@@ -19,22 +19,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: List contents of the root directory to verify structure
-      - name: List contents of the root directory
-        run: ls -la ${{ github.workspace }}
-
-      # Step 3: List contents of QAutomation to verify its contents
-      - name: List contents of QAutomation directory
-        run: ls -la ${{ github.workspace }}/QAutomation
-
-      # Step 4: Set up Java for Katalon Studio
+      # Step 2: Set up Java for Katalon Studio
       - name: Set up Java (Zulu)
         uses: actions/setup-java@v2
         with:
           java-version: '11'
           distribution: 'zulu'
 
-      # Step 5: Run Katalon Studio tests
+      # Step 3: Run Katalon Studio tests
       - name: Run Katalon Studio tests with Katalon GitHub Action
         uses: katalon-studio/katalon-studio-github-action@v2
         with:
