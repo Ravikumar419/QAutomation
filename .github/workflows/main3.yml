@@ -4,11 +4,19 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'QAutomation/**' # Replace with the actual path to your Katalon project
+      - 'Gemfile' # Trigger if Gemfile changes
+      - '.ruby-version' # Trigger if Ruby version changes
   pull_request:
     branches:
       - main
+    paths:
+      - 'QAutomation/**' # Replace with the actual path to your Katalon project
+      - 'Gemfile'
+      - '.ruby-version'
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *' # Daily at midnight UTC
 
 jobs:
   run-ios-tests:
@@ -16,47 +24,47 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3 # Use v3 for better performance and security
+        uses: actions/checkout@v3
 
       - name: Set up Java (Zulu)
-        uses: actions/setup-java@v3 # Use v3
+        uses: actions/setup-java@v3
         with:
           java-version: '11'
           distribution: 'zulu'
 
-      - name: Install Ruby and Bundler (for Appium dependencies)
+      - name: Set up Ruby and Bundler
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # Or a suitable version
-          bundler-cache: true # Improves caching for faster runs
+          ruby-version: '3.1' # Or your desired Ruby version
+          bundler-cache: true
 
       - name: Install Appium dependencies
         run: |
           gem install bundler
-          bundle install
+          bundle install --jobs 4 --retry 3 # More robust bundle install
 
       - name: Run Katalon Studio tests
         uses: katalon-studio/katalon-studio-github-action@v2
         with:
-          version: '10.0.1' # Or your desired version
-          projectPath: '${{ github.workspace }}/iOS Mobile Tests with Katalon Studio.prj' # Adjust if needed
+          version: '10.0.1' # Or your Katalon version
+          projectPath: '${{ github.workspace }}/QAutomation/iOS Mobile Tests with Katalon Studio.prj' # Correct path!
           args: '-noSplash -retry=0 \
                  -testSuitePath="Test Suites/IOS_Automation_TestSuite" \
                  -apiKey=${{ secrets.API_KEY }} \
                  --config -mobileDevice=true \
                  -appium:platformName="iOS" \
                  -appium:platformVersion="16.0" \ # Use a supported version
-                 -appium:deviceName="iPhone 14" \ # Use a valid device name or simulator
-                 -appium:bundleId="your.bundle.id" \ # Replace with your actual bundle ID
+                 -appium:deviceName="iPhone 14" \ # Or simulator name
+                 -appium:bundleId="your.bundle.id" \ # **REPLACE THIS!**
                  -appium:automationName="XCUITest" \
-                 -appium:udid="auto"' # Use 'auto' for simulators or provide a valid UDID
+                 -appium:udid="auto"'
 
       - name: Upload Test Reports (Optional)
         uses: actions/upload-artifact@v3
-        if: always() # Always upload even if tests fail
+        if: always()
         with:
           name: katalon-reports
-          path: path/to/your/katalon/reports # Replace with the actual path to your reports
+          path: ${{ github.workspace }}/Reports # Adjust if necessary
           retention-days: 7
 
       - name: Clean up (Optional)
