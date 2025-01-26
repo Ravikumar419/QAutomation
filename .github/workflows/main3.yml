@@ -1,0 +1,24 @@
+name: Run Katalon Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: macos-latest  # For iOS tests, use macOS runner
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Run Katalon Studio tests using the Katalon GitHub Action
+      - name: Run Katalon Studio tests
+        uses: katalon-studio/katalon-studio-github-action@v2
+        with:
+          version: '10.0.1'  # Specify the version of Katalon Studio
+          projectPath: '${{ github.workspace }}/QAutomation'  # Path to your Katalon project
+          args: '-noSplash -retry=0 -testSuiteCollectionPath="Test Suites/Simple Test Suite Collection" -apiKey=${{ secrets.API_KEY }} --config -webui.autoUpdateDrivers=true'
