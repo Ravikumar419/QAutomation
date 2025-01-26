@@ -19,11 +19,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Step 2: Set up Java for Katalon Studio
-      - name: Set up Java
+      # Step 2: Set up Java for Katalon Studio (using Zulu distribution)
+      - name: Set up Java (Zulu)
         uses: actions/setup-java@v2
         with:
           java-version: '11'  # Specify the Java version needed for Katalon Studio
+          distribution: 'zulu'  # Use Zulu OpenJDK distribution
 
       # Step 3: Install Katalon Studio
       - name: Install Katalon Studio
