@@ -1,68 +1,41 @@
 name: Run Katalon iOS Tests with Appium
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  schedule:
-    - cron: '0 0 * * *'  # Daily at midnight UTC (Optional)
+  # ... (triggers)
 
 jobs:
   run-ios-tests:
     runs-on: macos-latest
+    env:
+      KATALON_VERSION: "8.6.0" # Set your desired Katalon version
+      KATALON_INSTALL_DIR: ${{ runner.temp }}/katalon
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      # ... (checkout, Java, Ruby, Appium dependencies - same as Option 1)
 
-      - name: Set up Java (Zulu)
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11'
-          distribution: 'zulu'
-
-      - name: Set up Ruby and Bundler
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '3.1'  # Or your desired Ruby version
-          bundler-cache: true
-
-      - name: Install Appium dependencies
+      - name: Download Katalon Studio
         run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3  # More robust bundle install
-
-      - name: Download Katalon Studio (Optional)
-        # Download Katalon Studio manually or use a different action if needed
-
-      - name: Set Katalon Studio path (if downloaded manually)
-        # Set the path to Katalon Studio if downloaded manually
-        # run: echo "::set-output name=katalon_path::/path/to/katalon/katalon"
+          curl -LO "https://download.katalon.com/katalon-studio/katalon-studio-${{ env.KATALON_VERSION }}-macos.zip"
+          unzip katalon-studio-${{ env.KATALON_VERSION }}-macos.zip -d ${{ env.KATALON_INSTALL_DIR }}
+          rm katalon-studio-${{ env.KATALON_VERSION }}-macos.zip
 
       - name: Run Katalon Studio tests
         run: |
-          "${{ steps.set_katalon_path.outputs.katalon_path || '/path/to/katalon/katalon' }}" \
-             -noSplash -retry=0 \
-             -testSuitePath="Test Suites/YourTestSuite" \
-             -apiKey=${{ secrets.API_KEY }} \
-             --config -mobileDevice=true \
-             -appium:platformName="iOS" \
-             -appium:platformVersion="18.0.1" \
-             -appium:deviceName="iPad" \
-             -appium:bundleId="my.com.etiqa.ease.dev" \
-             -appium:automationName="XCUITest" \
-             -appium:udid="00008020-00180924262A402E"
+          "${{ env.KATALON_INSTALL_DIR }}/Katalon Studio.app/Contents/MacOS/katalon" -noSplash -retry=0 \
+            -testSuitePath="Test Suites/YourTestSuite" \
+            -apiKey=${{ secrets.API_KEY }} \
+            --config -mobileDevice=true \
+            -appium:platformName="iOS" \
+            -appium:platformVersion="18.0.1" \
+            -appium:deviceName="iPad" \
+            -appium:bundleId="my.com.etiqa.ease.dev" \
+            -appium:automationName="XCUITest" \
+            -appium:udid="00008020-00180924262A402E"
 
-      - name: Upload Test Reports (Optional)
+      - name: Upload Test Reports
         uses: actions/upload-artifact@v3
         if: always()
         with:
           name: katalon-reports
-          path: ${{ github.workspace }}/Reports  # Adjust if necessary
+          path: ${{ github.workspace }}/Reports
           retention-days: 7
-
-      - name: Clean up (Optional)
-        run: echo "Cleaning up..."
