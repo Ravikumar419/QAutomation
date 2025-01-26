@@ -53,7 +53,6 @@ for (int iterator = 4; iterator < (usedRangeRowCount - 1); iterator++) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("ddMMyy-HHmmss");
 
 		String startFormatted = dateFormat.format(new Date(startTime));
-		print('test')
 		
 		// G_AppPath stores the bundle ID
 		String appBundleId = GlobalVariable.G_AppPath
