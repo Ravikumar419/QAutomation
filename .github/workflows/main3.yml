@@ -43,8 +43,5 @@ jobs:
                  -appium:automationName="XCUITest" \
                  -appium:udid="00008020-00180924262A402E"'
 
-      # Step 4: (Optional) List Files in Reports Directory for Debugging (if reports are still needed)
-      - name: List Reports Directory
-        run: |
-          echo "Listing contents of Reports directory..."
-          ls -al ${{ github.workspace }}/QAutomation/Reports  # Correctly reference the Reports directory
+      # Step 4: Clean up (no reports to upload)
+      # We don't need to list or upload reports, so this step is removed entirely.
