@@ -20,8 +20,7 @@ jobs:
       - name: Set up Java 11
         uses: actions/setup-java@v2
         with:
-          java-version: '11'
-          distribution: 'adoptium'  # Updated to use Adoptium distribution
+          java-version: '11'  # Use OpenJDK 11, no need for distribution input
 
       # Step 3: Install Katalon Studio (latest stable version)
       - name: Install Katalon Studio
