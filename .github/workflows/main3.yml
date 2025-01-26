@@ -8,7 +8,7 @@ on:
     branches:
       - main  # Trigger on pull requests to the main branch
   schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight UTC1
+    - cron: '0 0 * * *'  # Run daily at midnight UTC
 
 jobs:
   run-ios-tests:
@@ -37,6 +37,18 @@ jobs:
                  -appium:platformName="iOS" -appium:platformVersion="18.0.1" \
                  -appium:deviceName="iPad" -appium:bundleId="my.com.etiqa.ease.dev" \
                  -appium:automationName="XCUITest" -appium:udid="00008020-00180924262A402E"'
+
+      # Debugging Step: List Files in QAutomation Directory
+      - name: List QAutomation Directory
+        run: |
+          echo "Listing contents of QAutomation directory..."
+          ls -al $(pwd)/QAutomation
+
+      # Debugging Step: List Files in Reports Directory
+      - name: List Reports Directory
+        run: |
+          echo "Listing contents of Reports directory..."
+          ls -al $(pwd)/QAutomation/Reports
 
       # Optional: Step 4: Upload Test Results
       - name: Upload Test Results
