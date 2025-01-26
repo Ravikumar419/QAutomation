@@ -32,27 +32,32 @@ jobs:
         with:
           version: '10.0.1'  # Specify the version of Katalon Studio (adjust this if needed)
           projectPath: '${{ github.workspace }}/QAutomation'  # Path to your Katalon project
-          args: '-noSplash -retry=0 -testSuiteCollectionPath="Test Suites/YourTestSuite" \
-                 -apiKey=${{ secrets.API_KEY }} --config -mobileDevice=true \
-                 -appium:platformName="iOS" -appium:platformVersion="18.0.1" \
-                 -appium:deviceName="iPad" -appium:bundleId="my.com.etiqa.ease.dev" \
-                 -appium:automationName="XCUITest" -appium:udid="00008020-00180924262A402E"'
+          args: '-noSplash -retry=0 \
+                 -testSuitePath="Test Suites/YourTestSuite" \  # Replace with your actual test suite path
+                 -apiKey=${{ secrets.API_KEY }} \
+                 --config -mobileDevice=true \
+                 -appium:platformName="iOS" \
+                 -appium:platformVersion="18.0.1" \
+                 -appium:deviceName="iPad" \
+                 -appium:bundleId="my.com.etiqa.ease.dev" \
+                 -appium:automationName="XCUITest" \
+                 -appium:udid="00008020-00180924262A402E"'
 
-      # Debugging Step: List Files in QAutomation Directory
+      # Step 4: List Files in QAutomation Directory (Verify the file structure)
       - name: List QAutomation Directory
         run: |
           echo "Listing contents of QAutomation directory..."
           ls -al $(pwd)/QAutomation
 
-      # Debugging Step: List Files in Reports Directory
+      # Step 5: List Files in Reports Directory (Verify if reports are being created)
       - name: List Reports Directory
         run: |
           echo "Listing contents of Reports directory..."
-          ls -al $(pwd)/QAutomation/Reports
+          ls -al $(pwd)/QAutomation/Reports  # This will show the contents of the Reports folder
 
-      # Optional: Step 4: Upload Test Results
+      # Step 6: Upload Test Results
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
           name: katalon-ios-test-results
-          path: $(pwd)/QAutomation/Reports  # Ensure reports are saved in the specified directory
+          path: $(pwd)/QAutomation/Reports  # Upload reports from the QAutomation/Reports directory
