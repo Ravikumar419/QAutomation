@@ -17,10 +17,11 @@ jobs:
         uses: actions/checkout@v2
 
       # Step 2: Set up Java (Katalon requires Java to run)
-      - name: Set up Java 11
+      - name: Set up Java 11 (Adoptium)
         uses: actions/setup-java@v2
         with:
           java-version: '11'  # Set the Java version to 11 for Katalon Studio
+          distribution: 'adoptium'  # Explicitly specify the Adoptium distribution
 
       # Step 3: Install Katalon Studio (latest stable version)
       - name: Install Katalon Studio
