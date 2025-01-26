@@ -47,18 +47,18 @@ jobs:
       - name: List QAutomation Directory
         run: |
           echo "Listing contents of QAutomation directory..."
-          ls -al $(pwd)/  # This will list the contents of the current directory where the repo is checked out
-          ls -al $(pwd)/QAutomation  # List the contents of the QAutomation directory to verify the structure
+          ls -al ${{ github.workspace }}/  # List the contents of the root directory to ensure structure
+          ls -al ${{ github.workspace }}/QAutomation  # List the contents of the QAutomation directory to verify structure
 
       # Step 5: List Files in Reports Directory (Verify if reports are being created)
       - name: List Reports Directory
         run: |
           echo "Listing contents of Reports directory..."
-          ls -al $(pwd)/QAutomation/Reports  # This will show the contents of the Reports folder
+          ls -al ${{ github.workspace }}/QAutomation/Reports  # This will show the contents of the Reports folder
 
       # Step 6: Upload Test Results
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
           name: katalon-ios-test-results
-          path: ${{ github.workspace }}/QAutomation/Reports
+          path: ${{ github.workspace }}/QAutomation/Reports  # Correct path to Reports folder
