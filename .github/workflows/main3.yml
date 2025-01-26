@@ -40,7 +40,7 @@ jobs:
           -testSuitePath="Test Suites/YourTestSuite" \
           -browserType="Mobile" \
           -deviceName="iPad" \
-          -platformVersion="16.0"
+          -platformVersion="18.0.1"
 
       # Step 5: Upload test results (optional)
       - name: Upload Test Results
