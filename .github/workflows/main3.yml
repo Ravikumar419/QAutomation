@@ -26,35 +26,19 @@ jobs:
           java-version: '11'  # Specify the Java version needed for Katalon Studio
           distribution: 'zulu'  # Use Zulu OpenJDK distribution
 
-      # Step 3: Install Katalon Studio
-      - name: Install Katalon Studio
-        run: |
-          wget https://download.katalon.com/10.0.1/Katalon_Studio_Engine_Mac_10.0.1.zip -O katalon.zip  # Adjust for the correct version
-          unzip katalon.zip -d katalon
-          chmod +x katalon/Katalon_Studio.app/Contents/MacOS/Katalon
+      # Step 3: Run Katalon Studio tests directly using Katalon GitHub Action
+      - name: Run Katalon Studio tests with Katalon GitHub Action
+        uses: katalon-studio/katalon-studio-github-action@v2
+        with:
+          version: '10.0.1'  # Specify the version of Katalon Studio (adjust this if needed)
+          projectPath: '${{ github.workspace }}/QAutomation'  # Path to your Katalon project
+          args: '-noSplash -retry=0 -testSuiteCollectionPath="Test Suites/YourTestSuite" \
+                 -apiKey=${{ secrets.API_KEY }} --config -mobileDevice=true \
+                 -appium:platformName="iOS" -appium:platformVersion="18.0.1" \
+                 -appium:deviceName="iPad" -appium:bundleId="my.com.etiqa.ease.dev" \
+                 -appium:automationName="XCUITest" -appium:udid="00008020-00180924262A402E"'
 
-      # Step 4: Set up Appium
-      - name: Set up Appium
-        run: |
-          brew install libimobiledevice  # Needed for communicating with iOS devices
-          npm install -g appium  # Install Appium globally
-          appium driver install uiautomator2 # Install Appium iOS driver for XCUITest
-
-      # Step 5: Run Katalon Tests using Appium capabilities
-      - name: Run Katalon Studio iOS tests with Appium
-        run: |
-          katalon/Katalon_Studio.app/Contents/MacOS/Katalon -noSplash -runMode=console \
-          -projectPath=$(pwd)/QAutomation/KatalonStudio.prj \
-          -testSuitePath="Test Suites/YourTestSuite" \
-          -browserType="Mobile" \
-          -deviceName="iPad" \
-          -platformVersion="18.0.1" \
-          -appium:bundleId="my.com.etiqa.ease.dev" \
-          -appium:automationName="XCUITest" \
-          -appium:udid="00008020-00180924262A402E" \
-          -apiKey=${{ secrets.API_KEY }}  # Pass the Katalon API Key from GitHub Secrets
-
-      # Optional: Step 6: Upload Test Results
+      # Optional: Step 4: Upload Test Results
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
