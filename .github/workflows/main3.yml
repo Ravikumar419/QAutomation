@@ -46,7 +46,9 @@ jobs:
                  -appium:deviceName="iPad" \
                  -appium:bundleId="my.com.etiqa.ease.dev" \
                  -appium:automationName="XCUITest" \
-                 -appium:udid="00008020-00180924262A402E"'
+                 -appium:udid="00008020-00180924262A402E" \
+                 -licenseRelease=true \
+                 -orgID="976796"'\
 
       # Optional: Clean up
       - name: Clean up
