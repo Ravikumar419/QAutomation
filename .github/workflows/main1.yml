@@ -42,7 +42,12 @@ jobs:
           -deviceName="AT ipad" \
           -platformVersion="18.0.1"  # Customize the device name and version as per your test environment
 
-      # Step 5: Upload Test Results
+      # Step 5: List Test Results Directory (Debugging step)
+      - name: List Test Results Directory
+        run: |
+          ls -al $(pwd)/QAutomation/Reports  # Verify if the test reports exist
+
+      # Step 6: Upload Test Results
       - name: Upload Test Results
         uses: actions/upload-artifact@v3
         with:
