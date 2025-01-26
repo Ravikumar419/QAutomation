@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "A03595F47A4F2D04BFCEA81C05389546",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.common.ScreenshotHelper",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "43123F88D326F08AC511B35D09243EF4",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.common.LogHelper",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

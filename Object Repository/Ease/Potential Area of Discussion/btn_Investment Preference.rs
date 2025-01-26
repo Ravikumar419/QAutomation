@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>btn_Investment Preference</name>
+   <tag></tag>
+   <elementGuidId>24df830b-f0bd-4d2d-b129-25abab87025b</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <locator>//*[@name = &quot;Investment Preference&quot;]</locator>
+   <locatorCollection>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@name = &quot;Investment Preference&quot;]</value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
+   <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
+</MobileElementEntity>

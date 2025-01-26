@@ -1,0 +1,23 @@
+26-01-25 16:13:18 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - loginWithDefaultPassCode - Entered passcode field - PASSED
+26-01-25 16:14:09 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Salutation - PASSED
+26-01-25 16:14:14 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Full Name - PASSED
+26-01-25 16:14:27 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: New IC - PASSED
+26-01-25 16:14:36 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Race - PASSED
+26-01-25 16:14:38 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Muslim - PASSED
+26-01-25 16:14:42 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Marital Status - PASSED
+26-01-25 16:14:45 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Smoking - PASSED
+26-01-25 16:14:49 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Number of Children - PASSED
+26-01-25 16:14:55 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Preferred Language - PASSED
+26-01-25 16:15:00 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Address line 1 - PASSED
+26-01-25 16:15:05 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Address line 2 - PASSED
+26-01-25 16:15:13 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Postcode - PASSED
+26-01-25 16:15:27 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: City - PASSED
+26-01-25 16:15:36 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: State - PASSED
+26-01-25 16:15:43 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Mobile No - PASSED
+26-01-25 16:15:49 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Email - PASSED
+26-01-25 16:15:59 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Occupation - PASSED
+26-01-25 16:16:04 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Company Name - PASSED
+26-01-25 16:16:17 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Monthly Income - PASSED
+26-01-25 16:16:27 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Bank Name - PASSED
+26-01-25 16:16:32 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Account Type - PASSED
+26-01-25 16:16:40 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Account No - PASSED

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>btn_Add selected rider</name>
+   <tag></tag>
+   <elementGuidId>dd75af0e-f4ed-4705-88fa-64a834c2340d</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <locator>//XCUIElementTypeStaticText[@name=&quot;Add selected rider&quot;]</locator>
+   <locatorCollection>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//XCUIElementTypeStaticText[@name=&quot;Add selected rider&quot;]</value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+   </locatorCollection>
+   <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
+</MobileElementEntity>

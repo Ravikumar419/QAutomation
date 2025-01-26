@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "7297D5163F70C7436F21B40D5988C54B",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.FinancialNeedsAnalysis",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

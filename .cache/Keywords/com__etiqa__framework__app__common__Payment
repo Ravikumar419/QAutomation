@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "7B6710E9F0E1BBA589256BCCEA77D0B3",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.Payment",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description>Test case used to create the proposal in the mobile application ipad</description>
+   <name>Ease_New Application</name>
+   <tag>Proposal_Creation</tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7fe0d182-9d93-4ac3-8c07-cb75e11cc30e</testCaseGuid>
+</TestCaseEntity>

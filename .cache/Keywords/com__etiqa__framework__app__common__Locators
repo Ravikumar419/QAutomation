@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "EAD0AF17F175ED65C544E52D016D8493",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.Locators",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

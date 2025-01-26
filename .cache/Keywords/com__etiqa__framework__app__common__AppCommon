@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "F657064A7C1F7CCDC5E91F2223358AC6",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.AppCommon",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

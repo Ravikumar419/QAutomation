@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "4108DEFFDB951AA0BEA54791879AD4F3",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.Executor",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "A77799AA064DEB28B37F82D6C97DF941",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.AssessmentDecision",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "F2F44B5062A4E7592B660CDDF50F9C57",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.Customers",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

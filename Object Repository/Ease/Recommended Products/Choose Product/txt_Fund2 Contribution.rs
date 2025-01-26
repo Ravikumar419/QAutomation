@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MobileElementEntity>
+   <description></description>
+   <name>txt_Fund2 Contribution</name>
+   <tag></tag>
+   <elementGuidId>e72974a0-fb33-456e-97b9-92b3c67f20ff</elementGuidId>
+   <selectorMethod>BASIC</selectorMethod>
+   <smartLocatorEnabled>false</smartLocatorEnabled>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <locator>//*[@name = &quot;Investment Allocation&quot;]//following::*[5]</locator>
+   <locatorCollection>
+      <entry>
+         <key>ANDROID_VIEWTAG</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>CUSTOM</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_CLASS_CHAIN</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>XPATH</key>
+         <value>//*[@name = &quot;Investment Allocation&quot;]//following::*[5]</value>
+      </entry>
+      <entry>
+         <key>CLASS_NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ID</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ATTRIBUTES</key>
+      </entry>
+      <entry>
+         <key>ACCESSIBILITY</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>NAME</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>IOS_PREDICATE_STRING</key>
+         <value></value>
+      </entry>
+      <entry>
+         <key>ANDROID_UI_AUTOMATOR</key>
+         <value>new UiSelector()</value>
+      </entry>
+   </locatorCollection>
+   <locatorStrategy>XPATH</locatorStrategy>
+   <platform>ANDROID</platform>
+</MobileElementEntity>

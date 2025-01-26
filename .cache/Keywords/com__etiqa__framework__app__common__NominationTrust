@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "027CD19D1BCEAEA5D28018ABDE28760D",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.NominationTrust",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

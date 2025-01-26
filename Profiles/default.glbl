@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalVariableEntities>
+   <description></description>
+   <name>default</name>
+   <tag></tag>
+   <defaultProfile>true</defaultProfile>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>10</initValue>
+      <name>G_Timeout</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'my.com.etiqa.ease.dev'</initValue>
+      <name>G_AppPath</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'/Users/etiqaqa/Katalon Studio/QAuto/Data Files/Controller v1.0.xlsx'</initValue>
+      <name>G_TestDataPath</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_CurrentTCID</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Ease Fields'</initValue>
+      <name>G_CurrColName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'New Application v1.0'</initValue>
+      <name>G_TDSheetName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'Controller v2.0'</initValue>
+      <name>G_CntrSheetName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_Functionality</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_Platform</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_Execute_Y_N</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_TestCaseName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_IsTestPassed</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_Environment</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>''</initValue>
+      <name>G_ErrorMessage</name>
+   </GlobalVariableEntity>
+</GlobalVariableEntities>

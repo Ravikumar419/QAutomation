@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "49C2C2EF76AF7840300DDCFEF338BAC6",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.RecommendedProducts",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

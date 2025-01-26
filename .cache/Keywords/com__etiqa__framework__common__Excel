@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "123204BB4D7679D5452737CCB479FA7D",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.common.ExcelHandler",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}

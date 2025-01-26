@@ -1,0 +1,10 @@
+{
+  "keywordFileContentHash": "89416B8AC448A903F6A28F1D2EE9BBAD",
+  "keywordClasses": [
+    {
+      "name": "com.etiqa.framework.app.common.PotentialAreaOfDiscussion",
+      "keywordMethods": []
+    }
+  ],
+  "javadocParsed": true
+}
