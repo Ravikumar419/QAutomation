@@ -33,12 +33,12 @@ jobs:
 
       # Step 4: Run Katalon Studio tests directly using Katalon GitHub Action
       - name: Run Katalon Studio tests with Katalon GitHub Action
-        uses: katalon-studio/katalon-studio-github-action@v2
+        uses: katalon-studio/katalon-studio-github-action@v4.0
         with:
           version: '10.0.1'  # Specify the version of Katalon Studio (adjust this if needed)
           projectPath: '${{ github.workspace }}/iOS Mobile Tests with Katalon Studio.prj'  # Path to your Katalon project
           args: '-noSplash -retry=0 \
-                 -testSuitePath="Test Suites/IOS_Automation_TestSuite" \  # Replace with your actual test suite path
+                 -testSuitePath="Test Suites/IOS_Automation_TestSuite" \  # Specify the path to your actual test suite
                  -apiKey=${{ secrets.API_KEY }} \
                  --config -mobileDevice=true \
                  -appium:platformName="iOS" \
