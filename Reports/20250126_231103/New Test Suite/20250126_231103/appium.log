@@ -103,3 +103,10 @@
 [38;5;73m[13cc844a][0m[38;5;86m[HTTP][0m <-- GET /wd/hub/session/13cc844a-2aed-4263-9053-d6008a00f986/window/rect 200 139 ms - 49 
 [38;5;73m[13cc844a][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/13cc844a-2aed-4263-9053-d6008a00f986/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
 [38;5;86m[HTTP][0m <-- POST /wd/hub/session/13cc844a-2aed-4263-9053-d6008a00f986/elements - - ms - - 
+[38;5;73m[13cc844a][0m[38;5;119m[XCUITestDriver@f475][0m Shutting down because we waited 1800 seconds for a command
+[38;5;73m[13cc844a][0m[38;5;157m[AppiumDriver@cacd][0m Ending session, cause was 'New Command Timeout of 1800 seconds expired. Try customizing the timeout using the 'newCommandTimeout' desired capability'
+[38;5;73m[13cc844a][0m[38;5;157m[AppiumDriver@cacd][0m Removing session '13cc844a-2aed-4263-9053-d6008a00f986' from our master session list
+[38;5;73m[13cc844a][0m[38;5;23m[DevCon Factory][0m Releasing connections for 00008020-00180924262A402E device on any port number
+[38;5;73m[13cc844a][0m[38;5;23m[DevCon Factory][0m Found cached connections to release: ["00008020-00180924262A402E:54541"]
+[38;5;73m[13cc844a][0m[38;5;23m[DevCon Factory][0m Releasing the listener for '00008020-00180924262A402E:54541'
+[38;5;73m[13cc844a][0m[38;5;224m[iProxy@00008020:54541][0m The connection has been closed
