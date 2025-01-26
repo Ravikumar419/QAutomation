@@ -3,10 +3,10 @@ name: Run Katalon iOS Tests with Appium
 on:
   push:
     branches:
-      - main
+      - main  # Trigger on changes to the main branch
   pull_request:
     branches:
-      - main
+      - main  # Trigger on pull requests to the main branch
   schedule:
     - cron: '0 0 * * *'  # Run daily at midnight UTC
 
@@ -43,22 +43,8 @@ jobs:
                  -appium:automationName="XCUITest" \
                  -appium:udid="00008020-00180924262A402E"'
 
-      # Step 4: List Files in QAutomation Directory (Verify the file structure)
-      - name: List QAutomation Directory
-        run: |
-          echo "Listing contents of QAutomation directory..."
-          ls -al ${{ github.workspace }}  # List the contents of the root directory to ensure structure
-          ls -al ${{ github.workspace }}/QAutomation  # List the contents of the QAutomation directory to verify structure
-
-      # Step 5: List Files in Reports Directory (Verify if reports are being created)
+      # Step 4: (Optional) List Files in Reports Directory for Debugging (if reports are still needed)
       - name: List Reports Directory
         run: |
           echo "Listing contents of Reports directory..."
           ls -al ${{ github.workspace }}/QAutomation/Reports  # Correctly reference the Reports directory
-
-      # Step 6: Upload Test Results
-      - name: Upload Test Results
-        uses: actions/upload-artifact@v3
-        with:
-          name: katalon-ios-test-results
-          path: ${{ github.workspace }}/QAutomation/Reports  # Correct path to Reports folder
