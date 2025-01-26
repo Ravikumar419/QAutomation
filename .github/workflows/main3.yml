@@ -3,7 +3,7 @@ name: Run Katalon iOS Tests with Appium
 on:
   push:
     branches:
-      - main  # Trigger on changes to the main branch
+      - main  # Trigger on changes to the main branch.
   pull_request:
     branches:
       - main  # Trigger on pull requests to the main branch
