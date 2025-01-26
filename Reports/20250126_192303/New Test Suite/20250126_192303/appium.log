@@ -1,0 +1,314 @@
+[38;5;112m[Appium][0m Welcome to Appium v2.13.1 (REV 55f399c10dc7e6cc07497bdfccdecc96329e3b57)
+[38;5;112m[Appium][0m Non-default server args:
+[38;5;112m[Appium][0m { basePath: [32m'/wd/hub'[39m, loglevel: [32m'info'[39m, port: [33m53799[39m }
+[38;5;112m[Appium][0m Attempting to load driver xcuitest...
+[38;5;112m[Appium][0m Appium REST http interface listener started on http://0.0.0.0:53799/wd/hub
+[38;5;112m[Appium][0m You can provide the following URLs in your client code to connect to this server:
+	http://127.0.0.1:53799/wd/hub (only accessible from the same host)
+	http://192.168.101.99:53799/wd/hub
+	http://169.254.204.136:53799/wd/hub
+[38;5;112m[Appium][0m Available drivers:
+[38;5;112m[Appium][0m   - xcuitest@7.35.0 (automationName 'XCUITest')
+[38;5;112m[Appium][0m No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+[38;5;86m[HTTP][0m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m {}
+[38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 4 ms - 200 
+[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m {"capabilities":{"firstMatch":[{"appium:appium:bundled":"my.com.etiqa.ease.dev","appium:appium:platformVersion":"18.0.1","appium:appium:udid":"00008020-00180924262A402E","appium:automationName":"XCUITest","appium:bundleId":"my.com.etiqa.ease.dev","appium:deviceId":"","appium:deviceName":"AT ipad","appium:newCommandTimeout":1800,"appium:noReset":"true","appium:platformName":"iOS","appium:platformVersion":"18.0.1","appium:udid":"00008020-00180924262A402E","appium:waitForAppScript":"true;","appium:wdaLocalPort":53757,"platformName":"IOS"}]},"desiredCapabilities":{"appium:appium:bundled":"my.com.etiqa.ease.dev","appium:appium:platformVersion":"18.0.1","appium:appium:udid":"00008020-00180924262A402E","appium:automationName":"XCUITest","appium:bundleId":"my.com.etiqa.ease.dev","appium:deviceId":"","appium:deviceName":"AT ipad","appium:newCommandTimeout":1800,"appium:noReset":"true","appium:platformName":"iOS","appium:platformVersion":"18.0.1","appium:udid":"00008020-00180924262A402E","appium:waitForAppScript":"t...
+[38;5;123m[BaseDriver][0m Ignoring capability 'appium:platformName=iOS' and using capability 'platformName=IOS'
+[38;5;123m[BaseDriver][0m The capabilities ["platformName"] are standard capabilities and do not require "appium:" prefix
+[38;5;112m[Appium][0m Attempting to find matching driver for automationName 'XCUITest' and platformName 'IOS'
+[38;5;112m[Appium][0m The 'xcuitest' driver was installed and matched caps.
+[38;5;112m[Appium][0m Will require it at /Users/etiqaqa/.appium/node_modules/appium-xcuitest-driver
+[38;5;57m[AppiumDriver@c7ab][0m Appium v2.13.1 creating new XCUITestDriver (v7.35.0) session
+[38;5;57m[AppiumDriver@c7ab][0m Checking BaseDriver versions for Appium and XCUITestDriver
+[38;5;57m[AppiumDriver@c7ab][0m Appium's BaseDriver version is 9.13.1
+[38;5;57m[AppiumDriver@c7ab][0m XCUITestDriver's BaseDriver version is 9.13.1
+[38;5;160m[XCUITestDriver@5022][0m Capability 'noReset' changed from string to boolean. This may cause unexpected behavior
+[38;5;160m[XCUITestDriver@5022][0m The following provided capabilities were not recognized by this driver:
+[38;5;160m[XCUITestDriver@5022][0m   bundled
+[38;5;160m[XCUITestDriver@5022][0m   deviceId
+[38;5;160m[XCUITestDriver@5022][0m   waitForAppScript
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Session created with session id: 34a87c1e-0160-462b-b68b-5dcaa9eebd55
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Determining device to run tests on: udid: '00008020-00180924262A402E', real device: true
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Normalized platformVersion capability value '18.0.1' to '18.0'
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Using WDA path: '/Users/etiqaqa/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent'
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Using WDA agent: '/Users/etiqaqa/.appium/node_modules/appium-xcuitest-driver/node_modules/appium-webdriveragent/WebDriverAgent.xcodeproj'
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m The pyidevice tool is not present in PATH. Skipping crash logs collection for real devices.
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Setting up real device
+[38;5;174m[34a87c1e][0m[38;5;23m[DevCon Factory][0m Requesting connection for device 00008020-00180924262A402E on local port 53757, device port 53757
+[38;5;174m[34a87c1e][0m[38;5;23m[DevCon Factory][0m Successfully requested the connection for 00008020-00180924262A402E:53757
+[38;5;174m[34a87c1e][0m[38;5;151m[WD Proxy][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Launching WebDriverAgent on the device
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m There is no need to perform the project cleanup. A fresh install has been detected
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m socket hang up
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Determined the downstream protocol as 'W3C'
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m WDA session startup took 45ms
+[38;5;174m[34a87c1e][0m[38;5;57m[AppiumDriver@c7ab][0m New XCUITestDriver session created successfully, session 34a87c1e-0160-462b-b68b-5dcaa9eebd55 added to master session list
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session 200 13743 ms - 578 
+[38;5;86m[HTTP][0m [37m-->[39m [37mGET[39m [37m/wd/hub/status[39m {}
+[38;5;86m[HTTP][0m <-- GET /wd/hub/status 200 1 ms - 200 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/timeouts[39m {"implicit":60000}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/timeouts 200 1 ms - 14 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/execute/sync[39m {"args":[],"script":"mobile: deviceScreenInfo"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/execute/sync 200 461 ms - 105 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/execute/sync[39m {"args":[],"script":"mobile: deviceScreenInfo"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/execute/sync 200 9 ms - 105 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/execute/sync[39m {"args":[{"appId":"my.com.etiqa.ease.dev","bundleId":"my.com.etiqa.ease.dev"}],"script":"mobile: activateApp"}
+[38;5;174m[34a87c1e][0m[38;5;123m[BaseDriver][0m The following script arguments are not known and will be ignored: appId
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/execute/sync 200 143 ms - 14 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element[39m {"value":"(//XCUIElementTypeStaticText[@name = 'Please enter your passcode']//following::XCUIElementTypeTextField)[1]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element 200 535 ms - 137 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1C000000-0000-0000-7C20-000000000000/click[39m {"id":"1C000000-0000-0000-7C20-000000000000"}
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Driver proxy active, passing request on via HTTP proxy
+[38;5;174m[34a87c1e][0m[38;5;160m[XCUITestDriver@5022][0m Replacing sessionId 4894549E-B919-464F-B116-7035453DAF1A with 34a87c1e-0160-462b-b68b-5dcaa9eebd55
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1C000000-0000-0000-7C20-000000000000/click 200 691 ms - 65 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element[39m {"value":"XCUIElementTypeSecureTextField","using":"class name"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element 200 294 ms - 137 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1C000000-0000-0000-7C20-000000000000/value[39m {"value":["1"],"id":"1C000000-0000-0000-7C20-000000000000","text":"1"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1C000000-0000-0000-7C20-000000000000/value 200 315 ms - 14 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element[39m {"value":"XCUIElementTypeSecureTextField","using":"class name"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element 200 234 ms - 137 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1D000000-0000-0000-7C20-000000000000/value[39m {"value":["2"],"id":"1D000000-0000-0000-7C20-000000000000","text":"2"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1D000000-0000-0000-7C20-000000000000/value 200 408 ms - 14 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element[39m {"value":"XCUIElementTypeSecureTextField","using":"class name"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element 200 292 ms - 137 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1E000000-0000-0000-7C20-000000000000/value[39m {"value":["3"],"id":"1E000000-0000-0000-7C20-000000000000","text":"3"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1E000000-0000-0000-7C20-000000000000/value 200 420 ms - 14 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element[39m {"value":"XCUIElementTypeSecureTextField","using":"class name"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element 200 276 ms - 137 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1F000000-0000-0000-7C20-000000000000/value[39m {"value":["4"],"id":"1F000000-0000-0000-7C20-000000000000","text":"4"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/1F000000-0000-0000-7C20-000000000000/value 200 424 ms - 14 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element[39m {"value":"XCUIElementTypeSecureTextField","using":"class name"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element 200 272 ms - 137 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/20000000-0000-0000-7C20-000000000000/value[39m {"value":["5"],"id":"20000000-0000-0000-7C20-000000000000","text":"5"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/20000000-0000-0000-7C20-000000000000/value 200 448 ms - 14 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element[39m {"value":"XCUIElementTypeSecureTextField","using":"class name"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element 200 297 ms - 137 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/21000000-0000-0000-7C20-000000000000/value[39m {"value":["6"],"id":"21000000-0000-0000-7C20-000000000000","text":"6"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/element/21000000-0000-0000-7C20-000000000000/value 200 427 ms - 14 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/timeouts[39m {"implicit":50}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/timeouts 200 1 ms - 14 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mGET[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/window/rect[39m {}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- GET /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/window/rect 200 127 ms - 49 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 1420 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 425 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 443 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 384 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 421 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 389 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 406 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 396 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 394 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 404 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 398 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 386 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 412 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 425 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 410 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 389 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 401 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 390 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 410 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 427 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 376 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 394 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 393 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 390 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 392 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 371 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 418 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 413 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 396 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 398 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 400 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 405 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 388 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 384 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 417 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 393 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 390 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 403 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 392 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 408 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 368 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 504 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 425 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 361 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 365 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 380 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 379 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 376 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 411 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 441 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 425 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 393 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 391 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 411 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 411 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 425 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 414 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 387 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 387 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 404 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 410 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 425 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 452 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 476 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 444 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 408 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 467 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 481 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 613 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 455 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 482 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 434 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 412 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 412 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 430 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 335 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 410 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 397 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 406 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 399 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 423 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 393 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 404 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 408 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 411 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 395 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 402 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 417 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 414 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 413 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 417 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 432 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 470 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 457 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 453 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 464 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 475 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 466 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 449 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 486 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 506 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 455 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 433 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 420 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 453 ms - 12 
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements[39m {"value":"//XCUIElementTypeStaticText[@name=\"+ New Application\"]","using":"xpath"}
+[38;5;174m[34a87c1e][0m[38;5;86m[HTTP][0m <-- POST /wd/hub/session/34a87c1e-0160-462b-b68b-5dcaa9eebd55/elements 200 405 ms - 12 
