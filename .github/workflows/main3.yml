@@ -1,14 +1,4 @@
-name: Run Katalon iOS Tests with Appium
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  schedule:
-    - cron: '0 0 * * *'
+# ... (rest of your workflow YAML)
 
 jobs:
   run-ios-tests:
@@ -26,12 +16,12 @@ jobs:
           java-version: '11'
           distribution: 'zulu'
 
-      # Step 3: Run Katalon Studio tests
+      # Step 3: Run Katalon Studio tests with corrected project path
       - name: Run Katalon Studio tests with Katalon GitHub Action
         uses: katalon-studio/katalon-studio-github-action@v2
         with:
           version: '10.0.1'
-          projectPath: '${{ github.workspace }}/QAutomation/iOS Mobile Tests with Katalon Studio.prj'  # Corrected path
+          projectPath: '${{ github.workspace }}/iOS Mobile Tests with Katalon Studio.prj'  # Assuming the project file is directly under the root directory
           args: '-noSplash -retry=0 \
                  -testSuitePath="Test Suites/IOS_Automation_TestSuite" \
                  -apiKey=${{ secrets.API_KEY }} \
