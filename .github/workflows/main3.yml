@@ -24,6 +24,7 @@ jobs:
         uses: actions/setup-java@v2
         with:
           java-version: '11'  # Set the appropriate Java version needed by Katalon Studio
+          distribution: 'adoptium'  # Specify the Java distribution (adoptopenjdk / adoptium)
 
       # Step 3: Install Katalon Studio (latest stable release)
       - name: Install Katalon Studio
