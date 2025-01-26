@@ -44,7 +44,7 @@ jobs:
 
       # Step 5: Upload Test Results
       - name: Upload Test Results
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: katalon-ios-test-results
           path: $(pwd)/QAutomation/Reports  # Ensure Katalon test reports are saved in this directory
