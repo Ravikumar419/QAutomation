@@ -22,3 +22,4 @@
 26-01-25 16:16:32 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Account Type - PASSED
 26-01-25 16:16:40 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - Current Field Name: Account No - PASSED
 26-01-25 19:23:47 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - loginWithDefaultPassCode - Entered passcode field - PASSED
+26-01-25 23:11:50 - TC001 - Proposal creation - Elite Plus Takaful Link - Couple plan - loginWithDefaultPassCode - Entered passcode field - PASSED
