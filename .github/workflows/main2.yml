@@ -22,7 +22,7 @@ jobs:
         with:
           java-version: '11'
 
-      # Step 3: Install Katalon Studio (latest stable version)1
+      # Step 3: Install Katalon Studio (latest stable version)
       - name: Install Katalon Studio
         run: |
           wget https://download.katalon.com/7.9.1/Katalon_Studio_Engine_Mac_7.9.1.zip -O katalon.zip
