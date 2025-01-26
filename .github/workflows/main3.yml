@@ -29,7 +29,7 @@ jobs:
       # Step 3: Verify files and paths (for debugging)
       - name: List files in repository
         run: |
-          ls -la ${GITHUB_WORKSPACE}  # List files in the workspace to verify file paths
+          ls -la ${{ github.workspace }}  # List files in the workspace to verify file paths
 
       # Step 4: Run Katalon Studio tests directly using Katalon GitHub Action
       - name: Run Katalon Studio tests with Katalon GitHub Action
