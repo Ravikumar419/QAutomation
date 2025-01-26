@@ -1,70 +1,68 @@
-name: Run Katalon iOS Tests with Appium
+name: Katalon Studio Tests
 
 on:
   push:
     branches:
       - main
-    paths:
-      - 'QAutomation/**' # Replace with the actual path to your Katalon project
-      - 'Gemfile' # Trigger if Gemfile changes
-      - '.ruby-version' # Trigger if Ruby version changes
   pull_request:
     branches:
       - main
-    paths:
-      - 'QAutomation/**' # Replace with the actual path to your Katalon project
-      - 'Gemfile'
-      - '.ruby-version'
   schedule:
-    - cron: '0 0 * * *' # Daily at midnight UTC
+    - cron: '0 0 * * *'  # Daily at midnight UTC (Optional)
 
 jobs:
-  run-ios-tests:
-    runs-on: macos-latest
+  run-tests:
+    runs-on: windows-latest  # Or macOS-latest if needed
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up Java (Zulu)
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v3  # Recommended for Katalon Studio
         with:
           java-version: '11'
           distribution: 'zulu'
 
-      - name: Set up Ruby and Bundler
-        uses: ruby/setup-ruby@v1
+      - name: Install Katalon Studio (if not pre-installed)
+        uses: shinnn/katalon-studio-installer@v1  # Optional, adjust version if needed
         with:
-          ruby-version: '3.1' # Or your desired Ruby version
-          bundler-cache: true
+          version: '8.5.5'  # Or your desired version
 
-      - name: Install Appium dependencies
+      - name: Use a specific Katalon Studio version (Optional)
+        uses: actions/cache@v3  # Cache Katalon Studio download
+        with:
+          path: ${{ runner.tempDirectory }}/katalon_studio
+          key: ${{ runner.os }}-katalon-${{ env.KATALON_VERSION }}
+          restore-keys: |
+            ${{ runner.os }}-katalon-
+
+      - name: Download Katalon Studio (if not cached)
         run: |
-          gem install bundler
-          bundle install --jobs 4 --retry 3 # More robust bundle install
+          if [ ! -f "${{ runner.tempDirectory }}/katalon_studio/katalon.zip" ]; then
+            curl -sfL https://download.katalon.com/katalon-studio/katalon-studio-${{ env.KATALON_VERSION }}-windows-64.zip -o "${{ runner.tempDirectory }}/katalon_studio/katalon.zip"
+          fi
+
+      - name: Extract Katalon Studio
+        run: |
+          unzip -qq "${{ runner.tempDirectory }}/katalon_studio/katalon.zip" -d "${{ runner.tempDirectory }}/katalon_studio"
+
+      - name: Set Katalon Studio path
+        env:
+          KATALON_STUDIO_PATH: ${{ runner.tempDirectory }}/katalon_studio/katalon.exe
 
       - name: Run Katalon Studio tests
-        uses: katalon-studio/katalon-studio-github-action@v2
-        with:
-          version: '10.0.1' # Or your Katalon version
-          projectPath: '${{ github.workspace }}/QAutomation/iOS Mobile Tests with Katalon Studio.prj' # Correct path!
-          args: '-noSplash -retry=0 \
-                 -testSuitePath="Test Suites/IOS_Automation_TestSuite" \
-                 -apiKey=${{ secrets.API_KEY }} \
-                 --config -mobileDevice=true \
-                 -appium:platformName="iOS" \
-                 -appium:platformVersion="16.0" \ # Use a supported version
-                 -appium:deviceName="iPhone 14" \ # Or simulator name
-                 -appium:bundleId="your.bundle.id" \ # **REPLACE THIS!**
-                 -appium:automationName="XCUITest" \
-                 -appium:udid="auto"'
+        run: |
+          "${{ env.KATALON_STUDIO_PATH }}" -noSplash -retry=0 \
+             -testSuiteCollectionPath="Test Suites/Simple Test Suite Collection" \
+             -apiKey=${{ secrets.API_KEY }} --config -webui.autoUpdateDrivers=true
 
       - name: Upload Test Reports (Optional)
         uses: actions/upload-artifact@v3
         if: always()
         with:
           name: katalon-reports
-          path: ${{ github.workspace }}/Reports # Adjust if necessary
+          path: path/to/your/katalon/reports  # Replace with actual report path
           retention-days: 7
 
       - name: Clean up (Optional)
