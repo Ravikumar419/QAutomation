@@ -42,7 +42,7 @@ jobs:
           -deviceName="AT ipad" \
           -platformVersion="18.0.1"  # Customize the device name and version as per your test environment
 
-      # Step 5: List Test Results Directory (Debugging step)
+      # Step 5: List Test Results Directory
       - name: List Test Results Directory
         run: |
           ls -al $(pwd)/QAutomation/Reports  # Verify if the test reports exist
