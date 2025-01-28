@@ -10,7 +10,7 @@ on:
 
 jobs:
   open-safari:
-    runs-on: [self-hosted, macOS, X64]
+    runs-on: ETIQAs-MacBook-Pro
 
     steps:
       - name: Checkout code
