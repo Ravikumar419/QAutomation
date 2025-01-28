@@ -110,3 +110,24 @@
 [38;5;73m[13cc844a][0m[38;5;23m[DevCon Factory][0m Found cached connections to release: ["00008020-00180924262A402E:54541"]
 [38;5;73m[13cc844a][0m[38;5;23m[DevCon Factory][0m Releasing the listener for '00008020-00180924262A402E:54541'
 [38;5;73m[13cc844a][0m[38;5;224m[iProxy@00008020:54541][0m The connection has been closed
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m Error Domain=com.apple.dt.deviceprep Code=-3 "Unlock AT ipad to Continue" UserInfo={NSRecoveryAttempter=<_DVTErrorRecoveryHandler: 0x6000032674d0>, NSLocalizedRecoveryOptions=(
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m     "Cancel Testing"
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m ), NSLocalizedRecoverySuggestion=Xcode cannot launch WebDriverAgentRunner on AT ipad because the device is locked., DVTRecoveryBlockKey=<__NSMallocBlock__: 0x6000022ac4e0>, NSLocalizedDescription=Unlock AT ipad to Continue}
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 2025-01-27 01:43:09.356 xcodebuild[18875:526919] [MT] Run Destination Preflight: Waiting for the destination to become ready.
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 2025-01-27 02:15:30.832 xcodebuild[18875:526919] [MT] IDETestOperationsObserverDebug: 11037.811 elapsed -- Testing started completed.
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 2025-01-27 02:15:30.832 xcodebuild[18875:526919] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 2025-01-27 02:15:30.832 xcodebuild[18875:526919] [MT] IDETestOperationsObserverDebug: 11037.811 sec, +11037.811 sec -- end
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m Test session results, code coverage, and logs:
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 	/Users/etiqaqa/Library/Developer/Xcode/DerivedData/WebDriverAgent-haubmzwykicwlzhbhgholwtpyvuz/Logs/Test/Test-WebDriverAgentRunner-2025.01.26_23-11-32-+0800.xcresult
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m Testing failed:
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 	Signing for "WebDriverAgentRunner" requires a development team. Select a development team in the Signing & Capabilities editor.
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 	Run test suite UITestingUITests encountered an error (Early unexpected exit, operation never finished bootstrapping - no restart will be attempted. (Underlying Error: Test runner exited before starting test execution.))
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m Failing tests:
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 	-[UITestingUITests testRunner]
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m ** TEST EXECUTE FAILED **
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m 
+[38;5;73m[13cc844a][0m[38;5;173m[Xcode][0m Testing started
