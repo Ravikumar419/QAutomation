@@ -1,0 +1,17 @@
+name: Test macOS Runner
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-job:
+    runs-on: [self-hosted, macOS, X64]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Test Command
+        run: echo "Hello, world!"
