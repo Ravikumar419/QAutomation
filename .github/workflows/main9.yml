@@ -10,7 +10,7 @@ on:
 
 jobs:
   open-safari:
-    runs-on: macos-latest  # GitHub's hosted macOS runner
+    runs-on: [self-hosted, macOS, X64]
 
     steps:
       - name: Checkout code
