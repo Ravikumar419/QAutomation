@@ -18,4 +18,4 @@ jobs:
 
       - name: Trigger Open Safari
         run: |
-          open ./apps/Open\ Safari.app
+          open /Users/etiqaqa/Desktop/Testing/Open\ Safari.app
