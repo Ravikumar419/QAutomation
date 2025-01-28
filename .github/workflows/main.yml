@@ -1,0 +1,23 @@
+name: Test Setup
+
+on:
+  push:
+    branches:
+      - main  # This triggers on pushes to the 'main' branch
+
+jobs:
+  test-setup:
+    runs-on: [self-hosted, macOS, X64]  # Using a self-hosted macOS runner
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Check macOS version
+        run: sw_vers  # Command to check macOS version
+
+      - name: Check Node.js version
+        run: node --version  # You can replace this with the version of the tool you're testing
+
+      - name: Print Hello World to confirm workflow is running
+        run: echo "Hello, GitHub Actions is running on a self-hosted macOS runner!"
