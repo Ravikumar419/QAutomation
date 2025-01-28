@@ -33,7 +33,7 @@ for (int iterator = 4; iterator < (usedRangeRowCount - 1); iterator++) {
 	GlobalVariable.G_Environment = ExcelHandler.getDataByHeaderAndRow('Environment', iterator)?.trim() ?: ''
 	GlobalVariable.G_IsTestPassed = true
 	long startTime = System.currentTimeMillis();
-
+	print("test")
 	// Consolidate checks into a single if statement with better readability
 	if (GlobalVariable.G_Execute_Y_N?.trim() &&
 		'Y' == GlobalVariable.G_Execute_Y_N.toUpperCase() &&
