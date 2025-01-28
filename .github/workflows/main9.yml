@@ -1,0 +1,22 @@
+name: Open Safari on macOS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  open-safari:
+    runs-on: macos-latest  # GitHub's hosted macOS runner
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Trigger Open Safari
+        run: |
+          # Open the Safari application located in the QAutomation repository
+          open ./QAutomation/Open\ Safari.app
