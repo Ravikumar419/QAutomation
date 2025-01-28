@@ -1,0 +1,23 @@
+name: Run Open Safari on macOS
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  open-safari:
+    runs-on: [self-hosted, macOS, X64]  # macOS runner for app interaction
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Run Open Safari.app
+      - name: Trigger Open Safari
+        run: |
+          open /Users/etiqaqa/Desktop/Testing/Open\ Safari.app
