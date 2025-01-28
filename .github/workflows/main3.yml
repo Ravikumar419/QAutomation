@@ -12,7 +12,7 @@ on:
 
 jobs:
   run-ios-tests:
-    runs-on: self-hosted  # macOS runner for iOS testing
+    runs-on: [self-hosted, macOS, X64]  # macOS runner for iOS testing
 
     steps:
       # Step 1: Checkout code
