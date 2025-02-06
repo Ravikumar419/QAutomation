@@ -1,31 +1,24 @@
-name: Test Setup
+name: Run Katalon Tests
 
 on:
   push:
     branches:
-      - main  # This triggers on pushes to the 'main' branch
+      - main
 
 jobs:
-  test-setup:
-    runs-on: [self-hosted, macOS, X64]  # Using a self-hosted macOS runner
+  run-tests:
+    runs-on: [self-hosted, macOS, X64]
     steps:
-      - name: Run Katalon Studio tests with Katalon GitHub Action
-        uses: katalon-studio/katalon-studio-github-action@v2
-        with:
-          version: '10.0.1'  # Specify the version of Katalon Studio (adjust if needed)
-          projectPath: '/Users/etiqaqa/Downloads/QAutomation/QAutomation.iOS.prj'  # Adjusted to match the correct project path
-          args: >
-            -noSplash -retry=0
-            -testSuitePath="Test Suites/IOS_Automation_TestSuite"  # Updated with your local test suite path
-            -apiKey=${{ secrets.API_KEY }}
-            --config -mobileDevice=true
-            -appium:platformName="iOS"
-            -appium:platformVersion="18.0.1"
-            -appium:deviceName="iPad"
-            -appium:bundleId="my.com.etiqa.ease.dev"
-            -appium:automationName="XCUITest"
-            -appium:udid="00008020-00180924262A402E"
-
-      # Optional: Clean up
-      - name: Clean up
-        run: echo "Cleaning up..."
+      - name: Run Katalon Test Suite
+        run: |
+          /Applications/Katalon Studio.app/Contents/MacOS/katalon \
+          -noSplash -retry=0 \
+          -testSuitePath="Test Suites/IOS_Automation_TestSuite" \
+          -apiKey=${{ secrets.API_KEY }} \
+          --config -mobileDevice=true \
+          -appium:platformName="iOS" \
+          -appium:platformVersion="18.0.1" \
+          -appium:deviceName="iPad" \
+          -appium:bundleId="my.com.etiqa.ease.dev" \
+          -appium:automationName="XCUITest" \
+          -appium:udid="00008020-00180924262A402E"
