@@ -8,16 +8,24 @@ on:
 jobs:
   test-setup:
     runs-on: [self-hosted, macOS, X64]  # Using a self-hosted macOS runner
-
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v2
+      - name: Run Katalon Studio tests with Katalon GitHub Action
+        uses: katalon-studio/katalon-studio-github-action@v2
+        with:
+          version: '10.0.1'  # Specify the version of Katalon Studio (adjust if needed)
+          projectPath: '/Users/etiqaqa/Downloads/QAutomation/QAutomation.iOS.prj'  # Adjusted to match the correct project path
+          args: >
+            -noSplash -retry=0
+            -testSuitePath="Test Suites/IOS_Automation_TestSuite"  # Updated with your local test suite path
+            -apiKey=${{ secrets.API_KEY }}
+            --config -mobileDevice=true
+            -appium:platformName="iOS"
+            -appium:platformVersion="18.0.1"
+            -appium:deviceName="iPad"
+            -appium:bundleId="my.com.etiqa.ease.dev"
+            -appium:automationName="XCUITest"
+            -appium:udid="00008020-00180924262A402E"
 
-      - name: Check macOS version
-        run: sw_vers  # Command to check macOS version
-
-      - name: Check Node.js version
-        run: node --version  # You can replace this with the version of the tool you're testing
-
-      - name: Print Hello World to confirm workflow is running
-        run: echo "Hello, GitHub Actions is running on a self-hosted macOS runner!"
+      # Optional: Clean up
+      - name: Clean up
+        run: echo "Cleaning up..."
