@@ -1,23 +1,14 @@
-name: Run Katalon Tests
+name: Run Katalon Tests Locally
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:  # Manually trigger from GitHub Actions UI
 
 jobs:
-  run-tests:
-    runs-on: [self-hosted, macOS, X64]
+  katalon-test:
+    runs-on: self-hosted  # This will run on your local PC where the self-hosted runner is installed
+
     steps:
-      - name: Run Katalon Test Suite
+      - name: Run Katalon Tests
         run: |
-          "/Applications/Katalon Studio.app/Contents/MacOS/Katalon Studio" -noSplash -retry=0 \
-          -testSuitePath="Test Suites/IOS_Automation_TestSuite" \
-          -apiKey=${{ secrets.API_KEY }} \
-          --config -mobileDevice=true \
-          -appium:platformName="iOS" \
-          -appium:platformVersion="18.0.1" \
-          -appium:deviceName="iPad" \
-          -appium:bundleId="my.com.etiqa.ease.dev" \
-          -appium:automationName="XCUITest" \
-          -appium:udid="00008020-00180924262A402E"
+          cd /Users/etiqaqa/Downloads/QAutomation  # Change to your Katalon project directory
+          katalon execute -noExit -projectPath=./Katalon_Project.katalon
