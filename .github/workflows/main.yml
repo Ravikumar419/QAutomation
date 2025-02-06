@@ -11,8 +11,7 @@ jobs:
     steps:
       - name: Run Katalon Test Suite
         run: |
-          /Applications/Katalon Studio.app/Contents/MacOS/katalon \
-          -noSplash -retry=0 \
+          "/Applications/Katalon Studio.app/Contents/MacOS/Katalon Studio" -noSplash -retry=0 \
           -testSuitePath="Test Suites/IOS_Automation_TestSuite" \
           -apiKey=${{ secrets.API_KEY }} \
           --config -mobileDevice=true \
