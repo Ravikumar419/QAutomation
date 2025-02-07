@@ -1,0 +1,14 @@
+name: Run Katalon Tests Locally
+
+on:
+  push:  # Trigger the workflow on push events
+
+jobs:
+  katalon-test:
+    runs-on: [self-hosted, macOS, x64]  # Specifies that the job will run on your self-hosted macOS x64 runners
+
+    steps:
+      - name: Run Katalon Tests
+        run: |
+          cd /Users/etiqaqa/Downloads/QAutomation  # Change to your Katalon project directory
+          katalon execute -noExit -projectPath=iOS Mobile Tests with Katalon Studio.prj  # Corrected path to your .prj file
