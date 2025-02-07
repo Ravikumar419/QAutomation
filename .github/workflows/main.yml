@@ -11,4 +11,4 @@ jobs:
       - name: Run Katalon Tests
         run: |
           cd /Users/etiqaqa/Downloads/QAutomation  # Change to your Katalon project directory
-          katalon execute -noExit -projectPath=./Katalon_Project.katalon
+          katalon execute -noExit -projectPath=./iOS\ Mobile\ Tests\ with\ Katalon\ Studio.prj  # Corrected path to your .prj file
