@@ -5,7 +5,7 @@ on:
 
 jobs:
   katalon-test:
-    runs-on: [self-hosted, macOS, x64]  # Specifies that the job will run on your self-hosted macOS x64 runner
+    runs-on: [self-hosted, macOS, x64]  # Specifies that the job will run on your self-hosted macOS x64 runners
 
     steps:
       - name: Run Katalon Tests
