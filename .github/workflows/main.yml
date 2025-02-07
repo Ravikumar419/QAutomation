@@ -1,7 +1,7 @@
 name: Run Katalon Tests Locally
 
 on:
-  workflow_dispatch:  # Manually trigger from GitHub Actions UI
+  push:  # Trigger the workflow on push events
 
 jobs:
   katalon-test:
